@@ -21,21 +21,19 @@ public class MainActivity extends AppCompatActivity {
         btnPlay = (ImageButton) findViewById(R.id.btnPlay);
 
 
-
-
         btnPlay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int val=0;
+                int val = 0;
 
                 try {
                     val = Integer.parseInt(editText1.getText().toString());
-                } catch (NumberFormatException e){
+                } catch (NumberFormatException e) {
                 }
 
 
-                Intent intent = new Intent(MainActivity.this,SecondActivity.class);
-                intent.putExtra("result",val);
+                Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+                intent.putExtra("result", val);
 
                 startActivity(intent);
 

@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="#30D5B5"
+    android:orientation="vertical"
     android:weightSum="3"
     tools:context="com.tnis.tngp17_001.tapper.MainActivity">
 
@@ -20,7 +20,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.8"/>
+        android:layout_weight="0.8" />
 
 
     <RelativeLayout
@@ -43,9 +43,9 @@
             android:layout_centerHorizontal="true"
             android:background="@android:color/transparent"
             android:hint="How many tap to win"
-            android:textSize="16sp"
             android:inputType="number"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:textSize="16sp" />
 
     </RelativeLayout>
 
