@@ -3,6 +3,7 @@ package com.tnis.tngp17_001.tapper;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -11,7 +12,6 @@ public class SecondActivity extends AppCompatActivity {
 
     int val = 0;
     int count = 0;
-    private ImageButton btnCoin;
     private TextView   tvNumber;
 
     @Override
@@ -21,7 +21,7 @@ public class SecondActivity extends AppCompatActivity {
 
 
         tvNumber = (TextView) findViewById(R.id.tvNumber);
-        btnCoin = (ImageButton) findViewById(R.id.btnCoin);
+        ImageButton btnCoin = (ImageButton) findViewById(R.id.btnCoin);
 
 
 
@@ -36,14 +36,16 @@ public class SecondActivity extends AppCompatActivity {
             public void onClick(View view) {
 
 
-                if (count >= val-1){
+                if (count >= val){
                     Intent intent = new Intent(SecondActivity.this,MainActivity.class);
                     startActivity(intent);
+                    finish();
                 }
 
-                if (val != 0)
-                count += 1;
-                tvNumber.setText(count+"");
+                if (val != 0 && count != val) {
+                    count ++;
+                    tvNumber.setText(count + "");
+                }
 
             }
         });
