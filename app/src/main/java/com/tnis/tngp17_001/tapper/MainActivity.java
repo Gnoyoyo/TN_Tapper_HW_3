@@ -30,14 +30,9 @@ public class MainActivity extends AppCompatActivity {
                     val = Integer.parseInt(editText1.getText().toString());
                 } catch (NumberFormatException e) {
                 }
-
-
                 Intent intent = new Intent(MainActivity.this, SecondActivity.class);
                 intent.putExtra("result", val);
-
                 startActivity(intent);
-
-
             }
         });
 
